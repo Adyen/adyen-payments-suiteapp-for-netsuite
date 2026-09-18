@@ -1,0 +1,73 @@
+name: Documentation Feedback
+description: Report an issue or suggest an improvement to the Adyen SuitePayments documentation
+title: "[Documentation] "
+labels:
+  - documentation
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping us improve the Adyen SuitePayments documentation.
+
+        Please provide as much detail as possible about the page and the suggested improvement.
+
+  - type: input
+    id: page
+    attributes:
+      label: Documentation page
+      description: Which Wiki page is this feedback about?
+      placeholder: Payment Methods and 3D Secure
+    validations:
+      required: true
+
+  - type: input
+    id: page-url
+    attributes:
+      label: Page URL
+      description: Paste the URL of the Wiki page, if available.
+      placeholder: https://github.com/Adyen/adyen-payments-suiteapp-for-netsuite/wiki/...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: feedback-type
+    attributes:
+      label: Feedback type
+      description: What type of documentation feedback are you providing?
+      options:
+        - Information is incorrect
+        - Information is unclear
+        - Information is missing
+        - Link is broken
+        - Navigation issue
+        - Formatting issue
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+      description: Describe what should be changed or improved.
+      placeholder: Please describe the issue or suggested improvement.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-change
+    attributes:
+      label: Suggested change
+      description: If you know how the documentation should be updated, describe it here.
+      placeholder: Optional suggested wording or change.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have checked that this feedback relates to the Adyen SuitePayments NetSuite documentation.
+          required: true
